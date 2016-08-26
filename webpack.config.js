@@ -47,6 +47,11 @@ var webpackPlugins = {
         warnings: true
       }
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.DedupePlugin(),
     new HtmlWebpackPlugin({
       template: './layouts/index.html'
