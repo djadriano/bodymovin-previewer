@@ -47,6 +47,9 @@ class App extends Component {
         {this.props.files.length > 0 &&
           <GridComponent />
         }
+        {this.props.files.length === 0 &&
+          <div className="bm-intro-message">Selecione arquivos para visualizar...</div>
+        }
       </div>
     )
   }
